@@ -1,0 +1,128 @@
+
+<html>
+    <head>
+        <title>CRUD</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- primero los css y despues los scripts -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: #2d6ca2; font-size: 18px" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: 2d6ca2; font-size: 18px" href="#">Contacto</a>
+                        </li>
+                    </ul>            
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-2"></div>
+
+                <div class="col-md-8" style="margin-top: 5%">
+
+                    <h1 style="text-align: center"><b>CRUD Personas</b></h1>
+
+                    <button class="btn btn-primary btn-lg" style="margin-top: 3%; background-color: #2d6ca2" id="agregarPersona">Agregar</button>
+                    <hr>
+                    <table class="table" style="margin-top: 3%">
+                        <thead>
+                            <tr>
+
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Edad</th>
+                                <th>Cuil</th>
+                                <th>Calle</th>
+                                <th>Numero</th>
+                                <th>Acciones</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="cuerpoTabla">
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="col-md-2" ></div>
+
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="modalPersona" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tituloModal" style="font-size: 23px"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formPersona">
+                            <div class="form-group">
+                                <input class="form-control" type="hidden" id="id" name="id">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Apellido</label>
+                                <input type="text" class="form-control" id="apellido">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Edad</label>
+                                <input type="text" class="form-control" id="edad">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Cuil</label>
+                                <input type="text" class="form-control" id="cuil">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Calle</label>
+                                <input type="text" class="form-control" id="calle">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Numero</label>
+                                <input type="text" class="form-control" id="numero">
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" id="guardar" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/jquery/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/funciones.js"></script>
+
+    </body>
+</html>
